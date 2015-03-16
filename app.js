@@ -1,6 +1,6 @@
 
 var testPort = require('check-port')//测试端口方法 testPort(port,host,cb)
-	,ceateHttp = require('http-service')
+	,createHttp = require('http-service')
 ;
 var _port = 88,_fdir = 'C://Users//yytest//Desktop//xh_html//';
 testPort(_port,'127.0.0.1',function(port,status){
@@ -22,7 +22,7 @@ testPort(_port,'127.0.0.1',function(port,status){
 		}
 	};
 	if(status === 'closed'){
-		ceateHttp(_port,_fdir,function(){
+		createHttp(_port,_fdir,function(){
 			console.log('创建成功！');
 		});
 	}else{
