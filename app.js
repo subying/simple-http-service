@@ -1,8 +1,11 @@
-
 var testPort = require('check-port')//测试端口方法 testPort(port,host,cb)
 	,createHttp = require('http-service')
 ;
-var _port = 88,_fdir = 'C://Users//yytest//Desktop//xh_html//';
+var _port = 88
+	,_dir = '' //设置固定的文件夹路径
+	,_fdir =  _dir ||  __dirname //获取当前文件夹路径
+;
+console.log(_fdir);
 testPort(_port,'127.0.0.1',function(port,status){
 	var msg = '';
 	switch(status){
